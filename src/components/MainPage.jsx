@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Checkbox,
-  CircularProgress,
   FormControlLabel,
   FormGroup,
   Stack,
@@ -43,7 +42,6 @@ const MainPage = ({ mode }) => {
       return;
     }
 
-    // const textCount = text.length;
     if (spaces) {
       const textCount = text.replace(/\s/g, "").length;
       setCount(textCount.toString().padStart(2, "0"));
@@ -101,7 +99,6 @@ const MainPage = ({ mode }) => {
             width: "100%",
             height: "200px",
             background: mode ? "rgba(42, 43, 55, 1)" : "rgba(242, 242, 247, 1)",
-            // color: mode ? "#fff" : null,
             border: "15px",
             outline: "rgba(242, 242, 247, 1)",
             padding: "15px",
@@ -156,7 +153,6 @@ const MainPage = ({ mode }) => {
               label="Set Character Limit"
               value={limitedBtn}
               onChange={() => setLimitedBtn(!limitedBtn)}
-              //   id="check2"
             />
             {limitedBtn && (
               <button
@@ -207,14 +203,10 @@ const MainPage = ({ mode }) => {
                 borderRadius: 1,
                 bgcolor: "primary.first",
                 position: "relative",
-                // "&:hover": {
-                //     bgcolor: "primary.dark",
-                // },
               }}
             >
               <div
                 style={{ position: "absolute", margin: "10px" }}
-                // onChange={wordCount}
               >
                 {count ? (
                   <p
@@ -248,9 +240,6 @@ const MainPage = ({ mode }) => {
                 borderRadius: 1,
                 bgcolor: "primary.second",
                 position: "relative",
-                // "&:hover": {
-                //     bgcolor: "primary.dark",
-                // },
               }}
             >
               <div style={{ position: "absolute", margin: "10px" }}>
@@ -286,9 +275,6 @@ const MainPage = ({ mode }) => {
                 borderRadius: 1,
                 bgcolor: "primary.third",
                 position: "relative",
-                // "&:hover": {
-                //     bgcolor: "primary.dark",
-                // },
               }}
             >
               <div style={{ position: "absolute", margin: "10px" }}>
@@ -321,65 +307,7 @@ const MainPage = ({ mode }) => {
         </ThemeProvider>
       </Stack>
 
-      {/* <Typography
-        sx={{ fontWeight: "bold", fontSize: "24px", margin: "25px 0" }}
-      >
-        Letter Density
-      </Typography> */}
-      {/* <Typography sx={{ fontSize: "16px" }}>
-        No characters found. Start typing to see letter density.
-      </Typography>
-      <Box>
-        <Box display="flex" justifyContent="space-between">
-          <Typography>E</Typography>
-          <progress
-            value={0.5}
-            style={{ color: "red" }}
-            bsPrefix="progress-bar"
-          />
-          <Typography>40 (16.06%)</Typography>
-        </Box>
-        <Box display="flex" justifyContent="space-between">
-          <Typography>I</Typography>
-          <progress
-            value={0.5}
-            style={{ color: "red" }}
-            bsPrefix="progress-bar"
-          />
-
-          <Typography>29 (11.65%)</Typography>
-        </Box>
-        <Box display="flex" justifyContent="space-between">
-          <Typography>T</Typography>
-          <progress
-            value={0.5}
-            style={{ color: "red" }}
-            bsPrefix="progress-bar"
-          />
-
-          <Typography>28 (11.24%)</Typography>
-        </Box>
-        <Box display="flex" justifyContent="space-between">
-          <Typography>O</Typography>
-          <progress
-            value={0.5}
-            style={{ color: "red" }}
-            bsPrefix="progress-bar"
-          />
-
-          <Typography>22 (8.84%)</Typography>
-        </Box>
-        <Box display="flex" justifyContent="space-between">
-          <Typography>N</Typography>
-          <progress
-            value={0.5}
-            style={{ color: "red" }}
-            bsPrefix="progress-bar"
-          />
-
-          <Typography>40 (16.06%)</Typography>
-        </Box>
-      </Box> */}
+     
 
       <Typography
         sx={{ fontWeight: "bold", fontSize: "24px", margin: "25px 0" }}
